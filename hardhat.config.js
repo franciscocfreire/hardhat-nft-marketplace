@@ -17,6 +17,7 @@ module.exports = {
     networks: {
         hardhat: {
             chainId: 31337,
+            blockConfirmations: 1,
             // gasPrice: 130000000000,
         },
         goerli: {
@@ -28,6 +29,7 @@ module.exports = {
         localhost: {
             url: "http://127.0.0.1:8545/",
             chainId: 31337,
+            blockConfirmations: 1,
         },
     },
     etherscan: {
