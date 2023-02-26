@@ -129,7 +129,7 @@ contract NftMarketPlace is ReentrancyGuard {
         uint256 tokenId
     ) external payable isListed(nftAddress, tokenId) nonReentrant {
         Listing memory listedItem = s_listings[nftAddress][tokenId];
-        if (msg.value <= listedItem.price) {
+        if (msg.value < listedItem.price) {
             revert NftMarketPlace__PriceNotMet(
                 nftAddress,
                 tokenId,
